@@ -2,16 +2,16 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        map = {}
+        hashmap = {}
 
         for i, num in enumerate(nums):
             complement = target - num
-            if num in map: # lookup current num
-                return [map[num],i]
-            # will find complement at index i
-            map[complement] = i
+            if num in hashmap: # lookup current num in hashmap
+                return [hashmap[num],i]
+            # store the complement and its index
+            hashmap[complement] = i
 
         return []
 
 solution = Solution()
-print(solution.twoSum([2,7,11,15], 9))
+print(solution.twoSum([3,2,4], 6))
