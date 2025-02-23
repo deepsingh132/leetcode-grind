@@ -4,6 +4,7 @@ from typing import List
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> List[int]:
+        # using Boyer-Moore Voting Algorithm (Hashmap)
         count = defaultdict(int)
 
         for n in nums:
